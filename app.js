@@ -39,7 +39,7 @@ bot.on("ready", async () => {
 });
 
 //Command Manager
-bot.on("message", async message => {
+bot.on("messageCreate", async message => {
     //Check if author is a bot or the message was sent in dms and return
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
