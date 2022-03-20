@@ -16,4 +16,3 @@ client.config = require("./config.json");
 require("./handler")(client);
 
 client.login(client.config.token);
-//mongodb+srv://neal:<password>@cluster0.dz40t.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
