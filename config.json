@@ -1,3 +1,5 @@
 {
-	"prefix":"!"
+    "token": "OTA5NTY0MzI2NDE3OTQwNTMw.YZGHyg.49CSDUKjcPBWC5ogpvQS9z-5xUc",
+    "prefix": "!",
+    "mongooseConnectionString": ""
 }
