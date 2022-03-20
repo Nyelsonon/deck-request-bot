@@ -1,4 +1,6 @@
 const { Client, Collection } = require("discord.js");
+const mongoose = require('mongoose')
+require('dotenv').config()
 
 const client = new Client({
     intents: 32767,
@@ -14,3 +16,4 @@ client.config = require("./config.json");
 require("./handler")(client);
 
 client.login(client.config.token);
+//mongodb+srv://neal:<password>@cluster0.dz40t.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
