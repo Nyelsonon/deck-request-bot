@@ -26,7 +26,6 @@ module.exports = {
         deck_id = deck_id.slice(1)
         sids = []
         temp = ""
-        let rawdata = fs.readFileSync(path.resolve(__dirname, 'cards.json'));
 
         for (let i = 0;i<deck_id.length;i++){
             if (i!=0){
@@ -39,7 +38,7 @@ module.exports = {
         }
         console.log(sids.toString())
         cards = []
-        let url = "https://raw.githubusercontent.com/KittySparkles/stormbound-kitty/main/src/data/cards.json";
+        let url = "https://raw.githubusercontent.com/Nyelsonon/deck-request-bot/main/data/cards.json";
 
         let settings = { method: "Get" };
         for (let j = 0; j<sids.length;j++){
@@ -47,9 +46,7 @@ module.exports = {
                 .then(res => res.json())
                 .then((json) => {
                     for (let i = 0; i < json.length; i++) {
-                        console.log(json[i].sid, sids[j])
                         if (json[i].sid == sids[j]){
-                            console.log("found")
                             return json[i].mana.toString()+json[i].name.toString()
                         }
                     }
